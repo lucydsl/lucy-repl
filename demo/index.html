@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Demo</title>
+<style>
+  lucy-repl {
+    border: 2px solid tomato;
+  }
+</style>
+<script type="module" src="../lib/lucy-repl.js"></script>
+</head>
+<body>
+
+<h1>Demo</h1>
+<lucy-repl>
+  <pre slot="lucy"><code>state enabled {
+  toggle => disabled
+}
+
+initial state disabled {
+  toggle => enabled
+}</code></pre>
+</lucy-repl>
+</body>
+</html>

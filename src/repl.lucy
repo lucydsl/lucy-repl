@@ -1,0 +1,14 @@
+initial state idle {
+  change => compile
+}
+
+state compile {
+  invoke(:compile) {
+    done => assign(js) => action(:setCompiledOutput) => idle
+    error => error
+  }
+}
+
+state error {
+  change => compile
+}

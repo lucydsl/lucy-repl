@@ -1,0 +1,40 @@
+{
+  "name": "@lucy/lucy-repl",
+  "version": "0.1.0",
+  "description": "A REPL for Lucy",
+  "main": "./lib/lucy-repl.js",
+  "exports": "./lib/lucy-repl.js",
+  "scripts": {
+    "build-lucy": "lucyc src/repl.lucy --out-file src/repl.js",
+    "copy-js": "cp src/repl.js src/repl.d.ts lib",
+    "build": "tsc && npm run copy-js",
+    "start": "web-dev-server --node-resolve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["lucy", "custom-element"],
+  "author": "Matthew Phillips",
+  "license": "BSD-2-Clause",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucydsl/lucy-repl.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lucydsl/lucy-repl/issues"
+  },
+  "homepage": "https://github.com/lucydsl/lucy-repl#readme",
+  "devDependencies": {
+    "@rollup/plugin-replace": "^2.4.2",
+    "@web/dev-server": "^0.1.17",
+    "@web/dev-server-rollup": "^0.3.3",
+    "lezer-generator": "^0.13.3",
+    "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "@codemirror/basic-setup": "^0.18.0",
+    "@codemirror/lang-javascript": "^0.18.0",
+    "@lucy/codemirror-lang": "^0.1.0",
+    "@lucy/liblucy": "^0.2.5",
+    "codemirror": "^5.61.0",
+    "xstate": "^4.19.1"
+  }
+}
